@@ -1,0 +1,315 @@
+def _3 (y, self) =
+  val _4 = read_block (self, 2) ;
+  call
+  (read_block (_4, 0))
+  with
+  (read_block (self, 1), y, _4)
+def _2 (x, self) =
+  val _3 = allocate_block (3) ;
+  val _ = write_block (_3, 0, &_3) ;
+  val _ = write_block (_3, 1, x) ;
+  val _ = write_block (_3, 2, read_block (self, 1)) ; _3
+def _1 (f, self) =
+  val _2 = allocate_block (2) ;
+  val _ = write_block (_2, 0, &_2) ;
+  val _ = write_block (_2, 1, f) ; _2
+val curry_1_2 =
+  val _1 = allocate_block (1) ;
+  val _ = write_block (_1, 0, &_1) ; _1
+def _6 (y1, y2, self) =
+  val _8 = read_block (self, 2) ;
+  call
+  (read_block (_8, 0))
+  with
+  (read_block (self, 1), y1, y2, _8)
+def _5 (x, self) =
+  val _7 = allocate_block (3) ;
+  val _ = write_block (_7, 0, &_6) ;
+  val _ = write_block (_7, 1, x) ;
+  val _ = write_block (_7, 2, read_block (self, 1)) ; _7
+def _4 (f, self) =
+  val _6 = allocate_block (2) ;
+  val _ = write_block (_6, 0, &_5) ;
+  val _ = write_block (_6, 1, f) ; _6
+val curry_1_3 =
+  val _5 = allocate_block (1) ;
+  val _ = write_block (_5, 0, &_4) ; _5
+def _9 (y1, y2, y3, self) =
+  val _12 = read_block (self, 2) ;
+  call
+  (read_block (_12, 0))
+  with
+  (read_block (self, 1), y1, y2, y3, _12)
+def _8 (x, self) =
+  val _11 = allocate_block (3) ;
+  val _ = write_block (_11, 0, &_9) ;
+  val _ = write_block (_11, 1, x) ;
+  val _ = write_block (_11, 2, read_block (self, 1)) ; _11
+def _7 (f, self) =
+  val _10 = allocate_block (2) ;
+  val _ = write_block (_10, 0, &_8) ;
+  val _ = write_block (_10, 1, f) ; _10
+val curry_1_4 =
+  val _9 = allocate_block (1) ;
+  val _ = write_block (_9, 0, &_7) ; _9
+def _12 (y1, y2, y3, y4, self) =
+  val _16 = read_block (self, 2) ;
+  call
+  (read_block (_16, 0))
+  with
+  (read_block (self, 1), y1, y2, y3, y4, _16)
+def _11 (x, self) =
+  val _15 = allocate_block (3) ;
+  val _ = write_block (_15, 0, &_12) ;
+  val _ = write_block (_15, 1, x) ;
+  val _ = write_block (_15, 2, read_block (self, 1)) ; _15
+def _10 (f, self) =
+  val _14 = allocate_block (2) ;
+  val _ = write_block (_14, 0, &_11) ;
+  val _ = write_block (_14, 1, f) ; _14
+val curry_1_5 =
+  val _13 = allocate_block (1) ;
+  val _ = write_block (_13, 0, &_10) ; _13
+def _15 (y1, y2, y3, y4, y5, self) =
+  val _20 = read_block (self, 2) ;
+  call
+  (read_block (_20, 0))
+  with
+  (read_block (self, 1), y1, y2, y3, y4, y5, _20)
+def _14 (x, self) =
+  val _19 = allocate_block (3) ;
+  val _ = write_block (_19, 0, &_15) ;
+  val _ = write_block (_19, 1, x) ;
+  val _ = write_block (_19, 2, read_block (self, 1)) ; _19
+def _13 (f, self) =
+  val _18 = allocate_block (2) ;
+  val _ = write_block (_18, 0, &_14) ;
+  val _ = write_block (_18, 1, f) ; _18
+val curry_1_6 =
+  val _17 = allocate_block (1) ;
+  val _ = write_block (_17, 0, &_13) ; _17
+def _16 (x1, x2, self) =
+  (x1 + x2)
+val f2 =
+  val _21 = allocate_block (1) ;
+  val _ = write_block (_21, 0, &_16) ; _21
+def _17 (x1, x2, x3, self) =
+  ((x1 + x2) + x3)
+val f3 =
+  val _22 = allocate_block (1) ;
+  val _ = write_block (_22, 0, &_17) ; _22
+def _18 (x1, x2, x3, x4, self) =
+  (((x1 + x2) + x3) + x4)
+val f4 =
+  val _23 = allocate_block (1) ;
+  val _ = write_block (_23, 0, &_18) ; _23
+def _19 (x1, x2, x3, x4, x5, self) =
+  ((((x1 + x2) + x3) + x4) + x5)
+val f5 =
+  val _24 = allocate_block (1) ;
+  val _ = write_block (_24, 0, &_19) ; _24
+def _20 (x1, x2, x3, x4, x5, x6, self) =
+  (((((x1 + x2) + x3) + x4) + x5) + x6)
+val f6 =
+  val _25 = allocate_block (1) ;
+  val _ = write_block (_25, 0, &_20) ; _25
+val test1_2 =
+  print_int
+  (
+    val _27 =
+      val _26 =
+        call (read_block (curry_1_2, 0)) with (f2, curry_1_2)
+        ;
+      call (read_block (_26, 0)) with (1, _26)
+      ;
+    call (read_block (_27, 0)) with (2, _27)
+  )
+val test1_3 =
+  print_int
+  (
+    val _29 =
+      val _28 =
+        call (read_block (curry_1_3, 0)) with (f3, curry_1_3)
+        ;
+      call (read_block (_28, 0)) with (1, _28)
+      ;
+    call (read_block (_29, 0)) with (2, 3, _29)
+  )
+val test1_4 =
+  print_int
+  (
+    val _31 =
+      val _30 =
+        call (read_block (curry_1_4, 0)) with (f4, curry_1_4)
+        ;
+      call (read_block (_30, 0)) with (1, _30)
+      ;
+    call (read_block (_31, 0)) with (2, 3, 4, _31)
+  )
+val test1_5 =
+  print_int
+  (
+    val _33 =
+      val _32 =
+        call (read_block (curry_1_5, 0)) with (f5, curry_1_5)
+        ;
+      call (read_block (_32, 0)) with (1, _32)
+      ;
+    call (read_block (_33, 0)) with (2, 3, 4, 5, _33)
+  )
+val test1_6 =
+  print_int
+  (
+    val _35 =
+      val _34 =
+        call (read_block (curry_1_6, 0)) with (f6, curry_1_6)
+        ;
+      call (read_block (_34, 0)) with (1, _34)
+      ;
+    call (read_block (_35, 0)) with (2, 3, 4, 5, 6, _35)
+  )
+def _23 (y, self) =
+  val _39 = read_block (self, 2) ;
+  call
+  (read_block (_39, 0))
+  with
+  (read_block (self, 1), y, _39)
+def _22 (o, x, self) =
+  val _38 = allocate_block (3) ;
+  val _ = write_block (_38, 0, &_23) ;
+  val _ = write_block (_38, 1, x) ;
+  val _ = write_block (_38, 2, read_block (self, 1)) ; _38
+def _21 (f, self) =
+  val _37 = allocate_block (2) ;
+  val _ = write_block (_37, 0, &_22) ;
+  val _ = write_block (_37, 1, f) ; _37
+val curry_2_2 =
+  val _36 = allocate_block (1) ;
+  val _ = write_block (_36, 0, &_21) ; _36
+def _26 (y1, y2, self) =
+  val _43 = read_block (self, 2) ;
+  call
+  (read_block (_43, 0))
+  with
+  (read_block (self, 1), y1, y2, _43)
+def _25 (o, x, self) =
+  val _42 = allocate_block (3) ;
+  val _ = write_block (_42, 0, &_26) ;
+  val _ = write_block (_42, 1, x) ;
+  val _ = write_block (_42, 2, read_block (self, 1)) ; _42
+def _24 (f, self) =
+  val _41 = allocate_block (2) ;
+  val _ = write_block (_41, 0, &_25) ;
+  val _ = write_block (_41, 1, f) ; _41
+val curry_2_3 =
+  val _40 = allocate_block (1) ;
+  val _ = write_block (_40, 0, &_24) ; _40
+def _29 (y1, y2, y3, self) =
+  val _47 = read_block (self, 2) ;
+  call
+  (read_block (_47, 0))
+  with
+  (read_block (self, 1), y1, y2, y3, _47)
+def _28 (o, x, self) =
+  val _46 = allocate_block (3) ;
+  val _ = write_block (_46, 0, &_29) ;
+  val _ = write_block (_46, 1, x) ;
+  val _ = write_block (_46, 2, read_block (self, 1)) ; _46
+def _27 (f, self) =
+  val _45 = allocate_block (2) ;
+  val _ = write_block (_45, 0, &_28) ;
+  val _ = write_block (_45, 1, f) ; _45
+val curry_2_4 =
+  val _44 = allocate_block (1) ;
+  val _ = write_block (_44, 0, &_27) ; _44
+def _32 (y1, y2, y3, y4, self) =
+  val _51 = read_block (self, 2) ;
+  call
+  (read_block (_51, 0))
+  with
+  (read_block (self, 1), y1, y2, y3, y4, _51)
+def _31 (o, x, self) =
+  val _50 = allocate_block (3) ;
+  val _ = write_block (_50, 0, &_32) ;
+  val _ = write_block (_50, 1, x) ;
+  val _ = write_block (_50, 2, read_block (self, 1)) ; _50
+def _30 (f, self) =
+  val _49 = allocate_block (2) ;
+  val _ = write_block (_49, 0, &_31) ;
+  val _ = write_block (_49, 1, f) ; _49
+val curry_2_5 =
+  val _48 = allocate_block (1) ;
+  val _ = write_block (_48, 0, &_30) ; _48
+def _35 (y1, y2, y3, y4, y5, self) =
+  val _55 = read_block (self, 2) ;
+  call
+  (read_block (_55, 0))
+  with
+  (read_block (self, 1), y1, y2, y3, y4, y5, _55)
+def _34 (o, x, self) =
+  val _54 = allocate_block (3) ;
+  val _ = write_block (_54, 0, &_35) ;
+  val _ = write_block (_54, 1, x) ;
+  val _ = write_block (_54, 2, read_block (self, 1)) ; _54
+def _33 (f, self) =
+  val _53 = allocate_block (2) ;
+  val _ = write_block (_53, 0, &_34) ;
+  val _ = write_block (_53, 1, f) ; _53
+val curry_2_6 =
+  val _52 = allocate_block (1) ;
+  val _ = write_block (_52, 0, &_33) ; _52
+val test2_2 =
+  print_int
+  (
+    val _57 =
+      val _56 =
+        call (read_block (curry_2_2, 0)) with (f2, curry_2_2)
+        ;
+      call (read_block (_56, 0)) with (0, 1, _56)
+      ;
+    call (read_block (_57, 0)) with (2, _57)
+  )
+val test2_3 =
+  print_int
+  (
+    val _59 =
+      val _58 =
+        call (read_block (curry_2_3, 0)) with (f3, curry_2_3)
+        ;
+      call (read_block (_58, 0)) with (0, 1, _58)
+      ;
+    call (read_block (_59, 0)) with (2, 3, _59)
+  )
+val test2_4 =
+  print_int
+  (
+    val _61 =
+      val _60 =
+        call (read_block (curry_2_4, 0)) with (f4, curry_2_4)
+        ;
+      call (read_block (_60, 0)) with (0, 1, _60)
+      ;
+    call (read_block (_61, 0)) with (2, 3, 4, _61)
+  )
+val test2_5 =
+  print_int
+  (
+    val _63 =
+      val _62 =
+        call (read_block (curry_2_5, 0)) with (f5, curry_2_5)
+        ;
+      call (read_block (_62, 0)) with (0, 1, _62)
+      ;
+    call (read_block (_63, 0)) with (2, 3, 4, 5, _63)
+  )
+val test2_6 =
+  print_int
+  (
+    val _65 =
+      val _64 =
+        call (read_block (curry_2_6, 0)) with (f6, curry_2_6)
+        ;
+      call (read_block (_64, 0)) with (0, 1, _64)
+      ;
+    call (read_block (_65, 0)) with (2, 3, 4, 5, 6, _65)
+  )

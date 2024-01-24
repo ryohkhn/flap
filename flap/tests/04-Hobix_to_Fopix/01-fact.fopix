@@ -1,0 +1,11 @@
+def _1 (n, self) =
+  if (n =? 0) then
+    1
+  else
+    (n * call (read_block (fact, 0)) with ((n - 1), fact))
+  end
+val fact =
+  val _1 = allocate_block (1) ;
+  val _ = write_block (_1, 0, &_1) ; _1
+val main =
+  print_int (call (read_block (fact, 0)) with (5, fact))

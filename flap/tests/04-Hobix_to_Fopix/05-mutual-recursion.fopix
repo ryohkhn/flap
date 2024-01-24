@@ -1,0 +1,18 @@
+def _1 (x, self) =
+  if (x =? 0) then
+    1
+  else call (read_block (g, 0)) with ((x - 1), g)
+  end
+def _2 (x, self) =
+  if (x =? 0) then
+    0
+  else call (read_block (f, 0)) with ((x - 1), f)
+  end
+val f =
+  val _1 = allocate_block (1) ;
+  val _ = write_block (_1, 0, &_1) ; _1
+val g =
+  val _2 = allocate_block (1) ;
+  val _ = write_block (_2, 0, &_2) ; _2
+val main =
+  print_int (call (read_block (f, 0)) with (20, f))

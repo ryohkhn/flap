@@ -1,0 +1,41 @@
+def _3 (x, self) =
+  call
+  (read_block (f, 0))
+  with
+  ((read_block (self, 2) + x), x, f)
+def _4 (a, b, self) =
+  (read_block (self, 1) + a)
+def _2 (k, self) =
+  (val _3 = read_block (self, 2) ;
+  call (read_block (_3, 0)) with (k, _3)
+  +
+  read_block (self, 1))
+def _1 (z, self) =
+  val x = (z + 1) ;
+  val y = x ;
+  val t = 0 ;
+  val g =
+    val _4 = allocate_block (3) ;
+    val _ = write_block (_4, 0, &_3) ;
+    val _ = write_block (_4, 1, z) ;
+    val _ = write_block (_4, 2, y) ; _4
+    ;
+  val f =
+    val _5 = allocate_block (3) ;
+    val _ = write_block (_5, 0, &_4) ;
+    val _ = write_block (_5, 1, z) ;
+    val _ = write_block (_5, 2, y) ; _5
+    ;
+  val _2 = allocate_block (3) ;
+  val _ = write_block (_2, 0, &_2) ;
+  val _ = write_block (_2, 1, x) ;
+  val _ = write_block (_2, 2, g) ; _2
+val f =
+  val _1 = allocate_block (1) ;
+  val _ = write_block (_1, 0, &_1) ; _1
+val main =
+  print_int
+  (
+    val _6 = call (read_block (f, 0)) with (21, f) ;
+    call (read_block (_6, 0)) with (20, _6)
+  )
